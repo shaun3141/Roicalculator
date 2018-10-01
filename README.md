@@ -1,5 +1,5 @@
 # Rise of Industry Calculator (Alpha 7.1)
-
+### [Link to Calculator](https://shaun3141.github.io/Roicalculator/)
 ## About this calculator
 This calculator is purely a client-side, Github Pages hosted basic web application. That means it's just HTML, CSS, and Javascript powering everything and holding all of the data. 
 My hope is that by requiring no specific setup or resources to get started, you can easily understand how this application works and build on top of it.
