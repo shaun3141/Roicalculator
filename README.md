@@ -12,12 +12,12 @@ Rise of Industry is picking up more and more traction as a game, my goal for thi
 ### Libraries Used:
 Currently this application only leverages jQuery and the [Materialize](https://materializecss.com/) framework.
 ### Javascript:
-##### products.js
+#### products.js
 Products are anything that can be consumed or produced. There are three classes that manage the products:
 - **ProductBook** - Contains all products and categories, along with methods to add or retrieve products.
 - **Product** - Data about a specific product, for now, limited to a unique id and a name
 - **ProductCategory** - Products belong to Product Categories, mostly used to render the "Desired Products" picker
-##### recipes.js
+#### recipes.js
 Recipes combine products with buildings and store the ratios. Each recipe has
 - **Name** - Recipe Name
 - **Inputs**- An array of products and their ratio quantity (classified as Ingredients)
@@ -25,7 +25,7 @@ Recipes combine products with buildings and store the ratios. Each recipe has
 - **Building** - Where this recipe is produced
 
 There is a **RecipeBook** class as well to help manage and find recipes. 
-##### buildings.js
+#### buildings.js
 Buildings are where items get produced from the recipes. Each building has
 - **Name** - Name of building (i.e. "Crop Farm")
 - **Speed** - Number of days it takes to make something
@@ -33,13 +33,13 @@ Buildings are where items get produced from the recipes. Each building has
 - **GathererName** - What you call the thing gathering resources (i.e. "Farm(s)")
 
 For now, buildings don't have any wrapper object to manage them, they are for better or worse just hanging out as global vars.
-##### app.js
+#### app.js
 This contains most of the logic. Today, there's only one real function called **"onDesiredProductsChage"**. This calls a bunch of other functions to calculate the production chain ratios, etc.
 There is also a global **appConfig** variable defined in this file that controls the number of gatherers and "period" of days your desired production is in terms of.
 I'll try to document more about how the ratio calculation works and all that soon.
-##### init.js
+#### init.js
 Today, this creates the HTML for the "Desired Products" section on the left based on the productBook. There isn't really any other initilization occuring for now.
-##### ui_listeners.js
+#### ui_listeners.js
 There are three listeners for UI changes:
 - **Quantity Chage** - Desired products were added or updated.
 - **Period Length** - The length of the production period was updated
