@@ -10,20 +10,6 @@ class DesiredProduct {
   }
 }
 
-class DeliveredProduct {
-  constructor(product, qty) {
-    this.product = product;
-    this.qty = qty;
-  }
-}
-
-class OverallOutput {
-  constructor(product, qty) {
-    this.product = product;
-    this.qty = qty;
-  }
-}
-
 class ProductionChain {
   constructor(productsRequested, steps, surplus) {
     this.productsRequested = productsRequested;
