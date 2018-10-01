@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RoI Calculator</title>
+    <meta name="description" content="Rise of Industry Calculator to help you optimize ratios and identify production chains">
+    
+    <meta name="twitter:card" value="Rise of Industry Calculator to help you optimize ratios and identify production chains">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Rise of Industry Calculator" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:description" content="Rise of Industry Calculator to help you optimize ratios and identify production chains" />
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/buildings.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/recipes.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ui_listeners.js"></script>
+    <script src="js/init.js"></script>  
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="container">
+            <a href="" class="brand-logo">Rise of Industry Calculator</a>
+            <div id="supportedVersion">Supporting Alpha 7.1</div>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--              <li><a href="">Support</a></li>-->
+              <li><a href="">View on Github</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="height: 20px;"></div>
+    <div class="container">
+      <div class="row">
+        
+        <div id="desiredSectionWrapper" class="col s3">
+          <div class="title">Desired Products</div>
+          
+          <div id="desiredProductsWrapper">
+            <!-- Dynamically populated on load -->
+          </div>
+        </div>
+          
+        <div id="neededSectionWrapper" class="col s9">
+          <!-- Settings -->
+          <div class="productionChainWrapper row">
+            <div class="title col s12 m2">Settings</div>
+            <div class="col s12 m3">
+              <div><b>Production per X Days:</b></div>
+              <div class="input-field" style="margin: 0; margin-top: -12px;">
+                <input id="numDays" type="number" value=15>
+<!--                <label for="numDays">Number of Days</label>-->
+              </div>
+            </div> 
+            <div class="col s12 m3">
+              <div><b>Number of Gatherers:</b></div>
+              <div class="switch">
+                <label style="font-size: 16px; color: black;">
+                  3
+                  <input id="numGatherers" type="checkbox" checked>
+                  <span class="lever"></span>
+                  5
+                </label>
+              </div>
+            </div> 
+          </div>
+          
+          <!-- Production Chains -->
+          <div id="productionChainContainer">
+            <!-- Dynamically populated on change -->
+            
+            <!-- Intro Content -->
+            <h3>Hey there!</h3>
+            <p>Thanks for checking out the Rise of Industry Calculator. I wanted a quick and easy tool to figure out how to best meet my town's demands and had some extra time so I put this together. I hope it's useful and if your technical, I'd love your help!</p>
+            <h5>Getting Started</h5>
+            <p>Take the desired input from one of your cities and change the value on the left hand side from 0 to what your city needs. The app should update the production chains as needed.</p>
+            <h5>Current State</h5>
+            <p>So far, this is in a proof-of-concept state, I wanted to get the math worked out, UI figured out, and things of that nature before spending hours copying data from the game. I tried to architect the app in a way that's immediately and easily scalable to support the other production chains and updates as they arrive.</p>
+            <h5>Technical Stuff</h5>
+            <p>I tried to keep this project super easy and "vanilla" so others can very easily help build this out on Github with me. It's simply HTML, CSS, and JS with no server whatsoever.</p>
+            <p>There are 3 main Javascript files that contain the underlying game logic, "products.js", "buildings.js", and "recipes.js".</p>
+            <p>I'd love pull requests to add additional data or features, fix bugs, or re-factor things for other contributors!</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+      init();
+    </script>
+  </body>
+</html>
